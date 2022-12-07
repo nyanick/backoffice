@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "build": "SET NODE_OPTIONS=--openssl-legacy-provider && next build",
+    "start": "SET NODE_OPTIONS=--openssl-legacy-provider && next start",
     "lint": "next lint"
   },
   "dependencies": {
@@ -39,6 +39,7 @@
   },
   "devDependencies": {
     "@types/react": "17.0.20",
+    "@types/react-select-country-list": "^2.2.1",
     "@types/yup": "^0.29.13",
     "autoprefixer": "^10.4.2",
     "eslint": "7.32.0",

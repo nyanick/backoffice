@@ -71,7 +71,7 @@ const AnalystCreate: NextPage = () => {
                                     width={'100%'}
                                     mx={'auto'}>
 
-                                    <Flex direction={['column', 'column', 'row', 'row']} spacing={[4, 4, 8, 8]}>
+                                    <Flex direction={['column', 'column', 'row', 'row']}  /*spacing={[4, 4, 8, 8]}*/ >
                                         <VStack spacing={4} flex={1}>
                                             <InputField
                                                 required

@@ -67,6 +67,12 @@ export const PatientForm: React.FC<Props> = (
     const bloodGroupList = ["A", "B","AB","O","Indéterminé"];
     const rhesusFactorList = ["-", "+","Indéterminé"];
 
+    const options = [
+        { value: 'chocolate', label: 'Chocolate' },
+        { value: 'strawberry', label: 'Strawberry' },
+        { value: 'vanilla', label: 'Vanilla' },
+    ];
+
     useEffect(() => {
         if(patientAddSuccess) {
             if (avatar) {
@@ -193,7 +199,7 @@ export const PatientForm: React.FC<Props> = (
                                     inputId='gender'
                                     id='gender'
                                     instanceId='gender'
-                                    defaultValue={genderList.find(gender => gender === patientsDetails?.gender)}
+                                    //defaultValue={genderList.find(gender => gender === patientsDetails?.gender)}
                                     options={genderList.map((gender) => ({
                                         label: gender,
                                         value: gender
@@ -224,7 +230,7 @@ export const PatientForm: React.FC<Props> = (
                                     inputId='bloodGroup'
                                     id='bloodGroup'
                                     instanceId='bloodGroup'
-                                    defaultValue={bloodGroupList.find(bloodGroup => bloodGroup === patientsDetails?.bloodGroup)}
+                                    //defaultValue={bloodGroupList.find(bloodGroup => bloodGroup === patientsDetails?.bloodGroup)}
                                     options={bloodGroupList.map((bloodGroup) => ({
                                         label: bloodGroup,
                                         value: bloodGroup
@@ -345,7 +351,7 @@ export const PatientForm: React.FC<Props> = (
                                     inputId='rhesusFactor'
                                     id='rhesusFactor'
                                     instanceId='rhesusFactor'
-                                    defaultValue={rhesusFactorList.find(rhesusFactor => rhesusFactor === patientsDetails?.rhesusFactor)}
+                                    //defaultValue={rhesusFactorList.find(rhesusFactor => rhesusFactor === patientsDetails?.rhesusFactor)}
                                     options={rhesusFactorList.map((rhesusFactor) => ({
                                         label: rhesusFactor,
                                         value: rhesusFactor
