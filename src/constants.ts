@@ -55,7 +55,7 @@ const apiRoutes = {
     EXAMS: '/consultations/exams',
     GROUPS: '/consultations/groups',
     GET_AUTHORITIES: '/users/authorities',
-    BASE_URL: 'http://129.151.188.233:8080/api',
+    BASE_URL: 'https://backoffice-g4q4drrkla-uc.a.run.app/api',
     GET_CURRENT_USER: '/users/account',
     LOGIN: '/users/login',
     GET_AVATAR: (avatarId) => `${process.env.NEXT_PUBLIC_API_URL}/users/avatar/${avatarId}`,
