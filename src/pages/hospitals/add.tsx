@@ -9,7 +9,7 @@ import {useUsers} from "../../hooks/user";
 const HospitalCreate: NextPage = () => {
     const router = useRouter()
     const addHospitalMutation = useAddHospital()
-    const usersQuery = useUsers(null, null, null)
+    const usersQuery = useUsers(null, null, "admin_hospital")
     const [createMode, setCreateMode] = useState<'single' | 'multiple'>(null)
     const [hospitalCreated, setHospitalCreated] = useState(false)
     const formikRef = useRef(null)
