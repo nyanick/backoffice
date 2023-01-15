@@ -4,8 +4,7 @@ import {verifyToken} from "../utils/Utils";
 import {appRoutes} from "../constants";
 
 const http = axios.create({
-    //baseURL: process.env.NEXT_PUBLIC_API_URL,
-    baseURL: "https://backoffice-g4q4drrkla-uc.a.run.app/api",
+    baseURL: process.env.NEXT_PUBLIC_API_URL,
     headers: {
         "Content-type": "application/json"
     }

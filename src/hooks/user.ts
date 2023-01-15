@@ -9,10 +9,24 @@ export const useUsers = (size, page, role) => {
 export const useGetAuthorities = () => {
     return useQuery("authorities", fetchAuthorities, {
         select: data => {
-            return data.map((authority) => ({
-                value: authority,
-                label: authority.split("_")[1].charAt(0).toUpperCase() + authority.split("_")[1].substr(1).toLowerCase()
-            } as IAuthority))
+            let result = [];
+            data.forEach(function(authority){
+                let role= authority.split("_")[1].charAt(0).toUpperCase() + authority.split("_")[1].substr(1).toLowerCase();
+                let hosipal_role = authority.split("_")[2];
+                let label = role;
+                if(hosipal_role){
+                    //console.log(hosipal_role);
+                    label = label +" "+ hosipal_role.charAt(0).toUpperCase() + hosipal_role.substr(1)?.toLowerCase();
+                }
+                
+                result.push(
+                    {
+                        value: authority,
+                        label: label
+                    } as IAuthority
+                )
+            });
+            return result;
         }
     })
 }

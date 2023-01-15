@@ -9,7 +9,7 @@ import {HospitalFormSkeleton} from "../../../components";
 
 const HospitalEdit: NextPage = () => {
     const router = useRouter()
-    const usersQuery = useUsers(null, null, null)
+    const usersQuery = useUsers(null, null, "admin_hospital")
     const editHospitalMutation = useEditHospital()
     const hospitalQuery = useHospital(router.query.id as any)
     const [createMode, setCreateMode] = useState<'single' | 'multiple'>(null)
