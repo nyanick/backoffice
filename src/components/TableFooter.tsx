@@ -13,7 +13,7 @@ export const TableFooter: React.FC<Props> = ({itemsCount, currentPage, setCurren
     return (
         <Tfoot>
             <Tr>
-                <Td colSpan={6}>
+                <Td colSpan={9}>
                     <div className='py-1 ml-auto'>
                         <Paging
                             onPageChange={(event, value) => {
